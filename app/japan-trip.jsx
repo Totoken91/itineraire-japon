@@ -289,6 +289,21 @@ const PACHINKO_SPOTS = [
   { city: 'kyoto', name: 'Pachinko près de Kyoto Station', area: 'Shichijo', why: 'Salles du quartier Shichijo. Plus petites mais authentiques' },
 ];
 
+const TRANSPORT_GUIDE = [
+  { section: 'IC Cards', title: 'Suica / Pasmo / ICOCA', detail: 'Cartes rechargeables acceptées partout. À acheter à tout guichet gare (¥2000 (~15€) = ¥1500 solde + ¥500 dépôt). Indispensable.' },
+  { section: 'IC Cards', title: 'Pocket WiFi / eSIM', detail: 'eSIM Airalo/Ubigi (~€20 pour 10-15GB) ou Pocket WiFi en aéroport. Google Maps nécessite une connexion' },
+  { section: 'Shinkansen', title: 'Tokyo → Kyoto', detail: 'Tokaido Shinkansen, Nozomi (2h 15min direct) ou Hikari (2h 45min). Réserve via Klook/JTB. ~¥13,320 (~102€)' },
+  { section: 'Shinkansen', title: 'Tokyo → Nagano', detail: 'Nagano Shinkansen via Nagoya, 1h 20min. Ou Limited Express Azusa (JR Chuo Line) 3h 30min. Moins cher en Limited Express' },
+  { section: 'JR Pass', title: 'JR Pass ? Vraiment utile ?', detail: 'Depuis oct 2023, prix +70%. Pour ce voyage: NON rentable. Achète les trajets à l\'unité via Klook/réservation gare' },
+  { section: 'Régional', title: 'Tokyo : Métro & trains', detail: 'Suica/Pasmo = tout. Yamanote Line (boucle Tokyo), Chiyoda/Marunouchi/autres. Google Maps = meilleur ami' },
+  { section: 'Régional', title: 'Nagano : Bus & petits trains', detail: 'Depuis Matsumoto: Oito Line (JR) vers Uji/Wasabi. Buses locaux = fréquents et efficaces' },
+  { section: 'Régional', title: 'Kyoto : Métro & Bus', detail: 'Métro Tozai/Karasuma. Bus = plus intuitif que métro pour touristes. ICOCA card Kyoto specifique (~¥4,000 (~31€) = ¥2,000 solde)' },
+  { section: 'Taxi', title: 'Quand prendre un taxi ?', detail: 'Cher (~¥1,500 (~12€) pour 5km). Utilise metro/bus sauf tard le soir après bars (derniers trains 24h-1h)' },
+  { section: 'Spécial', title: 'Draisines & attractions trains', detail: 'Randen Tram (Kyoto) = pittoresque. Resort View Furusato (Nagano) = train scenic. À réserver si possible' },
+  { section: 'Aéroports', title: 'Haneda vs Narita', detail: 'Haneda = centralisé, 60min Tokyo. Narita = plus loin, 90min, mais moins cher. Prendre Narita Express ou Keisei Skyliner' },
+  { section: 'Hubs', title: 'Tokyo Station = Central Hub', detail: 'Shinkansen, JR Lines, metros, buses pour aéroport. Énorme mais bien signalé. Passe-y au moins 2x' },
+];
+
 const TIPS = [
   { title: '🌧️ JUIN = TSUYU', text: 'Saison des pluies. Début juin à mi-juillet. Pluie plus forte fin juin. MAIS : pluie généralement douce et intermittente, ~15 jours de soleil en juin. Humidité 75%+, 22-28°C' },
   { title: '🧥 Pack rainy season', text: 'Chaussures imperméables, veste légère respirante à capuche, tissus quick-dry (PAS de denim/coton lourd), parapluie compact windproof, microfibre towel, protection sac. Les konbini vendent des ponchos à ¥500' },
@@ -316,6 +331,7 @@ export default function JapanTrip() {
   const [regionFilter, setRegionFilter] = useState('all');
   const [hotelTier, setHotelTier] = useState('all');
   const [animeCity, setAnimeCity] = useState('all');
+  const [transportSection, setTransportSection] = useState('all');
 
   const filteredDays = regionFilter === 'all' ? DAYS_DATA : DAYS_DATA.filter(d => d.region === regionFilter);
   const filteredAnime = animeCity === 'all' ? ANIME_SPOTS : ANIME_SPOTS.filter(s => s.city === animeCity);
@@ -345,6 +361,7 @@ export default function JapanTrip() {
         <div style={styles.navInner}>
           {[
             ['roadmap', 'Roadmap'],
+            ['transport', '🚆 Transport'],
             ['anime', '🎌 Anime'],
             ['hotels', 'Hôtels'],
             ['gems', 'Gems'],
@@ -373,6 +390,26 @@ export default function JapanTrip() {
             </div>
             <div style={styles.daysGrid}>
               {filteredDays.map((d, i) => <DayCard key={i} day={d} />)}
+            </div>
+          </section>
+        )}
+
+        {tab === 'transport' && (
+          <section>
+            <SectionHeader title="🚆 Transport & Mobilité" subtitle="Tout ce qu'il faut savoir pour se déplacer" />
+            <div style={styles.transportIntro}>
+              Le Japon a l'un des meilleurs systèmes de transport au monde. IC Cards (Suica/Pasmo), métro ultra-efficace, trains ponctuels.
+              Google Maps fonctionne parfaitement avec les transports en commun. Clé du succès : une IC Card + Google Maps + une eSIM/WiFi.
+            </div>
+            <div style={styles.filterBar}>
+              <FilterBtn active={transportSection === 'all'} onClick={() => setTransportSection('all')} color="#fff">TOUS</FilterBtn>
+              <FilterBtn active={transportSection === 'IC Cards'} onClick={() => setTransportSection('IC Cards')} color="#FF2D55">IC Cards</FilterBtn>
+              <FilterBtn active={transportSection === 'Shinkansen'} onClick={() => setTransportSection('Shinkansen')} color="#34C759">Shinkansen</FilterBtn>
+              <FilterBtn active={transportSection === 'Régional'} onClick={() => setTransportSection('Régional')} color="#FF9500">Régional</FilterBtn>
+              <FilterBtn active={transportSection === 'Aéroports'} onClick={() => setTransportSection('Aéroports')} color="#5E5CE6">Aéroports</FilterBtn>
+            </div>
+            <div style={styles.cardGrid}>
+              {TRANSPORT_GUIDE.filter(t => transportSection === 'all' || t.section === transportSection).map((t, i) => <TransportCard key={i} transport={t} />)}
             </div>
           </section>
         )}
@@ -617,6 +654,27 @@ function PachinkoCard({ p }) {
   );
 }
 
+function TransportCard({ transport }) {
+  const sectionColors = {
+    'IC Cards': '#FF2D55',
+    'Shinkansen': '#34C759',
+    'Régional': '#FF9500',
+    'Taxi': '#007AFF',
+    'Spécial': '#5E5CE6',
+    'Aéroports': '#5E5CE6',
+    'Hubs': '#FF9500',
+    'JR Pass': '#FF2D55',
+  };
+  const color = sectionColors[transport.section] || '#fff';
+  return (
+    <div style={{ ...styles.card, borderColor: color, boxShadow: `0 0 20px rgba(255,45,85,0.1)` }}>
+      <div style={{ ...styles.cardMeta, color: color }}>{transport.section}</div>
+      <h3 style={styles.cardTitle}>{transport.title}</h3>
+      <div style={styles.cardBody}>{transport.detail}</div>
+    </div>
+  );
+}
+
 function TipCard({ tip }) {
   return (
     <div style={{ ...styles.card, borderColor: 'rgba(255,255,255,0.1)' }}>
@@ -688,6 +746,7 @@ const styles = {
   dayItemDetail: { fontSize: 12, color: 'rgba(255,255,255,0.55)', marginTop: 4, lineHeight: 1.5 },
   dayItemNote: { fontSize: 11, fontFamily: "'Space Mono', monospace", marginTop: 6, letterSpacing: '0.05em', fontWeight: 700 },
   animeIntro: { fontSize: 15, lineHeight: 1.6, color: 'rgba(255,255,255,0.7)', marginBottom: 30, padding: 20, background: 'rgba(255,45,85,0.06)', border: '1px solid rgba(255,45,85,0.2)', borderRadius: 8, maxWidth: 900 },
+  transportIntro: { fontSize: 15, lineHeight: 1.6, color: 'rgba(255,255,255,0.7)', marginBottom: 30, padding: 20, background: 'rgba(52,199,89,0.06)', border: '1px solid rgba(52,199,89,0.2)', borderRadius: 8, maxWidth: 900 },
   animeCardTop: { display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 6 },
   animeRank: { fontSize: 14, fontWeight: 700 },
   animeSeries: { fontFamily: "'Space Mono', monospace", fontSize: 11, letterSpacing: '0.15em', color: 'rgba(255,255,255,0.5)', textTransform: 'uppercase' },
