@@ -248,6 +248,7 @@ const HIDDEN_GEMS = {
     { name: 'Meguro Sky Garden', vibe: 'Park au-dessus autoroute', address: 'Ikejiri-Ohashi', why: '7000m² de verdure sur un échangeur d\'autoroute. Vue Fuji par temps clair' },
     { name: 'Bar Trench', vibe: 'Speakeasy Shibuya', address: 'Shibuya (basement unmarked)', why: 'Sous-sol non marqué. Craft cocktails, vibe speakeasy pure' },
     { name: 'TIGHT (Nonbei Yokocho)', vibe: '5 sièges · time warp 1950', address: 'Nonbei Yokocho, Shibuya', why: 'Micro-bar à 5 sièges dans la ruelle Nonbei. Vibe 1950 absolue' },
+    { name: '👘 Nakano Broadway Kimono Floor', vibe: 'Kimono vintage otaku', address: '3F-5F Nakano Broadway, Shibuya', price: '¥5,000-30,000 (~38-230€)', why: 'Étages dédiés aux kimonos & yukatas vintage. Ambiance otaku mais vraie qualité. Moins cher qu\'à Kyoto. Alternatif, casual styles' },
   ],
   nagano: [
     { name: 'Daio Wasabi Farm', vibe: 'Campagne surréaliste', address: 'Azumino · 10min taxi de Hotaka Station', why: '37 acres de wasabi alimentés par les Alpes. Moulin + promenade' },
@@ -261,6 +262,10 @@ const HIDDEN_GEMS = {
     { name: 'Kurama-dera', vibe: 'Temple de montagne mystique', address: 'Kurama (30min train Eizan Line)', why: 'Temple dans une forêt, lieu de naissance du Reiki. Balade dans les cèdres centenaires' },
     { name: 'Mimurotoji (ajisai temple)', vibe: 'Hydrangea garden', address: 'Uji', why: 'En juin, 10,000 hortensias fleurissent. Temple hydrangea le plus célèbre' },
     { name: 'Weekenders Coffee', vibe: 'Specialty caché', address: 'Parking rénové, centre Kyoto', why: 'Single-origin, favoris des locals. L\'adresse des connaisseurs' },
+    { name: '👘 Kimonomichi (Kimono traditionnel)', vibe: 'Kimono haute couture', address: 'Shimogyo-ku, near Nishiki Market', price: '¥80,000-300,000 (~615-2300€)', why: 'Kimonos pour hommes authentiques, fabriqués à Kyoto. Teinture et tissage traditionnels. Consultation personnalisée' },
+    { name: '👘 Tamatsugu (depuis 1947)', vibe: 'Kimono vintage & classique', address: 'Nakagyō-ku, Kyoto', price: '¥30,000-100,000 (~230-770€) vintage', why: 'Shop légendaire. Kimonos pour hommes (hadanugi, samurai style). Stock vintage rare et authentique' },
+    { name: '👘 Kyoto Kimono Market', vibe: 'Marché kimono', address: 'Shimogyo-ku', price: '¥5,000-50,000 (~38-385€)', why: 'Marché périodique (le 10-15 de chaque mois). Yukata pas cher, kimono vintage, accessoires. Bon marché = bonnes affaires' },
+    { name: '👘 Malts (Kimono Vintage)', vibe: 'Vintage cool & design', address: 'Sakyo-ku, Kyoto', price: '¥8,000-40,000 (~62-307€)', why: 'Kimonos & yukatas vintage stylisés. Moins strict que traditionnel, parfait pour casual wear. Sacs & accessoires' },
   ],
 };
 
@@ -323,6 +328,8 @@ const TIPS = [
   { title: '🍣 Réserve les restos top', text: 'Les vrais bons spots se réservent 1-2 mois à l\'avance. TableCheck.com ou Omakase.in' },
   { title: '👘 Étiquette temples', text: 'Bow avant le torii. Lave-toi mains+bouche au chozuya. Pas de photos à l\'intérieur sauf mention. Parle bas' },
   { title: '🏯 Heures dorées', text: 'Temples touristiques : ARRIVE 7H-8H. Tu auras Kiyomizu, Fushimi Inari, Bamboo Grove presque pour toi seul' },
+  { title: '👘 Kimono Pour Homme', text: 'Yukata (casual) : ¥3,000-5,000 (~23-38€). Kimono basique : ¥15,000-30,000 (~115-230€). Kimono qualité : ¥50,000+ (~385€+). Vintage : ¥5,000-20,000 (~38-154€). Kyoto = meilleur endroit. Essaie Tamatsugu ou Kimonomichi pour l\'authentique' },
+  { title: '👘 Où trouver', text: 'Kyoto : Kimonomichi, Tamatsugu, Kyoto Kimono Market, Malts. Tokyo : Nakano Broadway (vintage), Asakusa (touristique). Prix moins cher en marché périodique (10-15 chaque mois)' },
 ];
 
 const ICONS = {
