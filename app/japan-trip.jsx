@@ -179,32 +179,24 @@ const DAYS_DATA = [
 
 const HOTELS = {
   tokyo: [
-    { tier: 'design', name: 'TRUNK(HOTEL)', area: 'Shibuya', price: '¥40,000-60,000 (~308-462€)', address: '5-31 Jingumae, Shibuya-ku, Tokyo', why: 'Boutique pionnier du "socialising". Lobby-bar électrique, design local-first, terrasse sur Cat Street' },
-    { tier: 'design', name: 'Hotel Koé Tokyo', area: 'Shibuya', price: '¥30,000-45,000 (~231-346€)', address: '1-14-28 Dogenzaka, Shibuya-ku', why: 'Hotel-boutique-bakery-restaurant-store. Design minimaliste, pain frais sorti du four, DJ sets' },
-    { tier: 'design', name: 'K5 Tokyo', area: 'Nihonbashi', price: '¥35,000-55,000 (~269-423€)', address: '3-5-10 Nihonbashikabutocho, Chuo-ku', why: 'Ancienne banque des années 20 reconvertie. Bibliothèque, Brooklyn Brewery tap, pieds de lit en béton brut' },
-    { tier: 'design', name: 'The Tokyo Station Hotel', area: 'Marunouchi', price: '¥50,000-80,000 (~385-615€)', address: '1-9-1 Marunouchi, Chiyoda-ku', why: 'Dans le bâtiment historique de Tokyo Station lui-même. Classique européen, service impeccable' },
-    { tier: 'budget', name: 'APA Hotel Shinjuku Kabukicho Tower', area: 'Shinjuku', price: '¥12,000-15,000 (~92-115€)', address: '1-20-2 Kabukicho, Shinjuku-ku', why: 'Chaîne business japonaise classique. Centralissime, tout petites rooms mais efficaces' },
-    { tier: 'budget', name: 'Sotetsu Fresa Inn Higashi Shinjuku', area: 'Shinjuku', price: '¥10,000-15,000 (~77-115€)', address: '7-27-9 Shinjuku, Shinjuku-ku', why: '3★, rating 8.4. Proche métro, propre. Solide rapport qualité-prix' },
-    { tier: 'budget', name: 'Tokyu Stay Shinjuku', area: 'Shinjuku', price: '¥18,000-25,000', address: '3-7-1 Shinjuku', why: 'Machine à laver + kitchenette EN CHAMBRE. Parfait séjour long. Près métro' },
-    { tier: 'budget', name: 'MIMARU Tokyo Shinjuku West', area: 'Nishi-Shinjuku', price: '¥20,000-30,000 (~154-231€)', address: 'Nishishinjuku, Shinjuku-ku', why: 'APPART-HOTEL. Cuisine complète dans chaque room + coin laundry. Si long séjour' },
-    { tier: 'budget', name: '9h nine hours Shinjuku-North', area: 'Shinjuku', price: '¥2,500 (~19€)-4,000', address: '3min train de Shinjuku', why: 'Capsule hotel design pour l\'expérience d\'une nuit. Mixte, propre, self check-in' },
+    { tier: 'budget', name: '9h nine hours Shinjuku-North ⭐', area: 'Shinjuku', price: '¥2,500-4,000 (~19-31€)', address: '3min train de Shinjuku', why: 'CAPSULE HOTEL. Mixte, propre, self check-in. Ultra pas cher' },
+    { tier: 'budget', name: 'Khaosan Tokyo Kabuki', area: 'Asakusa', price: '¥2,800-4,500 (~21-35€)', address: 'Près Asakusa', why: 'Auberge backpackers. Dortoir ultra pas cher, kitchen, social' },
+    { tier: 'budget', name: 'Nui Hostel & Lounge', area: 'Kuramae', price: '¥3,500-5,500 (~27-42€)', address: 'Kuramae', why: 'Design hostel. Dortoir, bon quartier, restaurant pas cher' },
+    { tier: 'budget', name: 'APA Hotel Shinjuku Kabukicho Tower', area: 'Shinjuku', price: '¥7,000-10,000 (~54-77€)', address: '1-20-2 Kabukicho, Shinjuku-ku', why: 'Business hotel, petit mais propre, centralissime' },
+    { tier: 'budget', name: 'Sotetsu Fresa Inn', area: 'Shinjuku', price: '¥6,500-9,000 (~50-69€)', address: '7-27-9 Shinjuku', why: '3★, rating 8.4. Proche métro, bon value' },
   ],
   nagano: [
-    { tier: 'design', name: 'Ryokan Seifuso', area: 'Matsumoto', price: '¥25,000-50,000 (~192-385€)', address: 'Matsumoto, Nagano', why: '2★ mais ryokan traditionnel. Shuttle aéroport, vélos. Pour l\'expérience tatami + futon + onsen' },
-    { tier: 'design', name: 'Alpico Plaza Hotel Matsumoto', area: 'Matsumoto', price: '¥18,000-28,000 (~138-215€)', address: 'Matsumoto (5min Timepiece Museum)', why: '3★ central, vélos en prêt, bien noté' },
-    { tier: 'budget', name: 'Dormy Inn Matsumoto Natural Hot Spring ⭐', area: 'Matsumoto', price: '¥10,000-14,000 (~77-108€)', address: '5min walk JR Matsumoto Station', why: 'ONSEN NATUREL sur le toit (indoor + outdoor), sauna, glaces gratuites, ramen gratuit 21h30-23h. Deal imbattable' },
-    { tier: 'budget', name: 'Dormy Inn Nagano ⭐', area: 'Nagano City', price: '¥10,000-15,000 (~77-115€)', address: '1min walk JR Nagano Station', why: 'Même formule onsen + ramen. Le top pour Nagano City' },
-    { tier: 'budget', name: 'Tabino Hotel Matsumoto', area: 'Matsumoto', price: '¥8,000-12,000 (~62-92€)', address: 'Matsumoto', why: 'Rating 9.2. Très abordable, simple mais confortable' },
-    { tier: 'budget', name: 'Toyoko Inn Matsumoto Eki Higashi Guchi', area: 'Matsumoto', price: '¥7,500-9,500 (~58-73€)', address: '1.4km de Matsumoto Castle', why: '333 chambres, breakfast inclus. Chaîne budget ultra fiable' },
+    { tier: 'budget', name: 'Guesthouse Yumoto ⭐', area: 'Matsumoto', price: '¥3,000-4,500 (~23-35€)', address: 'Matsumoto', why: 'AUBERGE simple. Dortoir, propre, friendly staff' },
+    { tier: 'budget', name: 'Dormy Inn Matsumoto ⭐', area: 'Matsumoto', price: '¥6,500-10,000 (~50-77€)', address: '5min walk JR Matsumoto', why: 'ONSEN GRATUIT sur le toit + RAMEN GRATUIT 21h30-23h !! Best value' },
+    { tier: 'budget', name: 'Dormy Inn Nagano', area: 'Nagano City', price: '¥6,500-10,000 (~50-77€)', address: '1min walk JR Nagano', why: 'Même deal onsen + ramen gratuit' },
+    { tier: 'budget', name: 'Toyoko Inn Matsumoto', area: 'Matsumoto', price: '¥5,500-7,500 (~42-58€)', address: '1.4km Matsumoto Castle', why: 'Petit-déj inclus, chaîne ultra fiable' },
   ],
   kyoto: [
-    { tier: 'design', name: 'Ace Hotel Kyoto', area: 'Shinpukan', price: '¥40,000-70,000', address: '245-2 Kurumayacho, Nakagyo-ku', why: 'Dans le Shinpukan (bâtiment téléphonique rénové par Kuma Kengo). Piscine, DJ sets, designs par des artisans locaux' },
-    { tier: 'design', name: 'The Thousand Kyoto', area: 'Kyoto Station', price: '¥45,000-65,000 (~346-500€)', address: '570 Higashishiokoji-cho, Shimogyo-ku', why: 'Hôtel 5★ épuré, design japonais modern-minimaliste. Accès direct gare' },
-    { tier: 'design', name: 'HOTEL THE MITSUI Kyoto', area: 'Nijo Castle', price: '¥80,000-150,000 (~615-1154€)', address: '284 Nijoaburanokoji-cho, Nakagyo-ku', why: 'LE luxe absolu. Onsen privé dans certaines suites, restaurant étoilé' },
-    { tier: 'budget', name: 'Mitsui Garden Hotel Kawaramachi Jokyoji ⭐', area: 'Kawaramachi', price: '¥15,000-25,000 (~115-192€)', address: 'Kawaramachi, Nakagyo-ku', why: '166 rooms, 4★. 1min Hankyu Kawaramachi, 7min Gion Shijo. Public bath intérieur avec peinture à l\'encre, concept temple-hôtel' },
-    { tier: 'budget', name: 'Dormy Inn Premium Kyoto Ekimae', area: 'Kyoto Station', price: '¥12,000-18,000 (~92-138€)', address: 'Près de Kyoto Tower', why: 'Onsen naturel + sauna + massage. La formule Dormy Inn' },
-    { tier: 'budget', name: 'Len Kyoto Kawaramachi (hostel design)', area: 'Kawaramachi', price: '¥4,000 (~31€)-10,000', address: 'Kawaramachi Street, Kyoto', why: 'Auberge design industriel-chic. Lits énormes, bar/café au rez, étage women-only' },
-    { tier: 'budget', name: 'Nishitetsu Resort Inn Kyoto', area: 'Shijo Karasuma', price: '¥9,000-14,000 (~69-108€)', address: 'Shijo Karasuma', why: 'Central, propre, simple, pas cher' },
+    { tier: 'budget', name: 'Len Kyoto Kawaramachi ⭐', area: 'Kawaramachi', price: '¥3,500-6,000 (~27-46€)', address: 'Kawaramachi Street', why: 'Design HOSTEL. Dortoir, lits énormes, bar au rez. Excellent value' },
+    { tier: 'budget', name: 'Khaosan Kyoto Kabuki', area: 'Higashiyama', price: '¥2,900-5,000 (~22-38€)', address: 'Higashiyama', why: 'Auberge backpackers. Ultra pas cher, dortoir, kitchen' },
+    { tier: 'budget', name: 'Dormy Inn Kyoto Ekimae', area: 'Kyoto Station', price: '¥6,500-10,000 (~50-77€)', address: 'Près Kyoto Tower', why: 'ONSEN + sauna. Best value pour petit budget' },
+    { tier: 'budget', name: 'Mitsui Garden Hotel Kawaramachi', area: 'Kawaramachi', price: '¥8,000-12,000 (~62-92€)', address: 'Kawaramachi', why: '4★ à bas prix, 1min station, public bath' },
+    { tier: 'budget', name: 'Nishitetsu Resort Inn', area: 'Shijo Karasuma (périphérie ok)', price: '¥5,500-8,000 (~42-62€)', address: 'Shijo Karasuma', why: 'Très basique, central assez, pas cher' },
   ],
 };
 
@@ -330,6 +322,11 @@ const TIPS = [
   { title: '🏯 Heures dorées', text: 'Temples touristiques : ARRIVE 7H-8H. Tu auras Kiyomizu, Fushimi Inari, Bamboo Grove presque pour toi seul' },
   { title: '👘 Kimono Pour Homme', text: 'Yukata (casual) : ¥3,000-5,000 (~23-38€). Kimono basique : ¥15,000-30,000 (~115-230€). Kimono qualité : ¥50,000+ (~385€+). Vintage : ¥5,000-20,000 (~38-154€). Kyoto = meilleur endroit. Essaie Tamatsugu ou Kimonomichi pour l\'authentique' },
   { title: '👘 Où trouver', text: 'Kyoto : Kimonomichi, Tamatsugu, Kyoto Kimono Market, Malts. Tokyo : Nakano Broadway (vintage), Asakusa (touristique). Prix moins cher en marché périodique (10-15 chaque mois)' },
+  { title: '💰 BUDGET PAUVRE — Mode Ultra-Économe', text: 'HÉBERGEMENT : Capsule ¥2,500-4,500/nuit (~19-35€). FOOD : Ramen/Gyudon ¥800-1,200, convenience store ¥150-500. TOTAL : ¥5,000-8,000/jour (~38-62€). HACK : Dormy Inn = RAMEN GRATUIT 21h30-23h + onsen gratuit' },
+  { title: '💸 Manger Pas Cher', text: 'CONVENIENCE STORES (7-11, Lawson) : onigiri ¥150, sandwiches ¥300-500, ramen ¥400. RESTAURANTS : Ramen ¥800, Gyudon ¥600-900, Udon ¥500. YAKINIKU AYCE ¥3,000 si 4 personnes. Skip les restos touristiques = 2-3x plus cher' },
+  { title: '🎟️ Activités Gratuites', text: 'TEMPLES/SHRINES : Plupart gratuit ou ¥300. PARCS : Gratuit. WALKS : Philosopher\'s Path, Higashiyama = gratuit. SKIP : Ghibli ¥1,000 (réserve une seule visite si vraiment envie), restos haut de gamme' },
+  { title: '🚆 Transport Pas Cher', text: 'IC CARD = ¥2,000 (¥1,500 solde + ¥500 dépôt récupéré). Métro Tokyo ¥170-300/trajet. Prefectures : buses locaux pas chers. ASTUCE : marchez beaucoup = gratuit + découvertes. Pas de JR Pass (trop cher maintenant)' },
+  { title: '💳 Budget 22 jours RÉALISTE', text: 'Hébergement ¥2,500-4,500 × 22 = ¥55,000-99,000 (~420-760€). Food ¥1,500/jour × 22 = ¥33,000 (~254€). Transport ¥1,500/jour = ¥33,000 (~254€). Activités ¥500/jour = ¥11,000 (~85€). TOTAL : ¥132,000-176,000 (~1,000-1,350€). C\'EST POSSIBLE EN ÉTANT STRICT !' },
 ];
 
 const ICONS = {
